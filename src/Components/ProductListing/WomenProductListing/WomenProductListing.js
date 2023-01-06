@@ -35,9 +35,9 @@ const ProductPage = () => {
   }
   const fetchProducts = async () => {
     const response = await axios
-      .get("https://fakestoreapi.com/products")
-
-    dispatch(setProducts(response.data));
+      .get("https://mocki.io/v1/b6315fe5-0b85-4680-b40f-dee5830b73a0")
+    // console.log(response,'**********')
+    dispatch(setProducts(response.data.posts));
   };
 
   useEffect(() => {
@@ -47,7 +47,6 @@ const ProductPage = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   return (
     <>
       <div className="productlisting">
@@ -125,6 +124,13 @@ const ProductPage = () => {
                   <label><input type="checkbox" onChange={(e) => filterHandler(e.target.checked, "/electronics")} checked={pathname == "/electronics"} id="option" name="option" value="option" />Electronics</label>
                   <label><input type="checkbox" onChange={(e) => filterHandler(e.target.checked, "/men")} checked={pathname == "/men"} id="option" name="option" value="option" />Men's Clothing</label>
                   <label><input type="checkbox" onChange={(e) => filterHandler(e.target.checked, "/women")} checked={pathname == "/women"} id="option" name="option" value="option" />Women's Clothing</label>
+
+
+                  <p>Colours</p>
+                  <label><input type="checkbox" checked={pathname == "/"} />Red</label>
+                  <label><input type="checkbox" />Green</label>
+                  <label><input type="checkbox" />Blue</label>
+                  <label><input type="checkbox" />Black</label>
                 </div>
               </div>
               <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12">
