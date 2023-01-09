@@ -89,6 +89,12 @@ h1, h2, h3 {
   position: relative;
 }
 
+.header__icons ul .header__Searchall {
+  color: black;
+  border: white;
+  border-radius: 6px;
+}
+
 .header__icons ul .itemnumbers .cart__count {
   padding-left: 5px;
   position: absolute;
