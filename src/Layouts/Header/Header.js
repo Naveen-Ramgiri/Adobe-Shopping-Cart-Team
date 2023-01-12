@@ -42,9 +42,6 @@ const Header = (props) => {
       case "jewellery":
         navigate("/jewellery");
         break;
-      default:
-        navigate("/");
-        break;
     }
   };
 
